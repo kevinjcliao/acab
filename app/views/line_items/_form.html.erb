@@ -1,0 +1,112 @@
+<%= form_with(model: line_item, local: true) do |form| %>
+  <% if line_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(line_item.errors.count, "error") %> prohibited this line_item from being saved:</h2>
+
+      <ul>
+        <% line_item.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :department %>
+    <%= form.text_field :department %>
+  </div>
+
+  <div class="field">
+    <%= form.label :division %>
+    <%= form.text_field :division %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dept %>
+    <%= form.text_field :dept %>
+  </div>
+
+  <div class="field">
+    <%= form.label :department_alias %>
+    <%= form.text_field :department_alias %>
+  </div>
+
+  <div class="field">
+    <%= form.label :service_area %>
+    <%= form.text_field :service_area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :service_area_alias %>
+    <%= form.text_field :service_area_alias %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fund %>
+    <%= form.text_field :fund %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fund_and_desc %>
+    <%= form.text_field :fund_and_desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :org %>
+    <%= form.text_field :org %>
+  </div>
+
+  <div class="field">
+    <%= form.label :org_and_desc %>
+    <%= form.text_field :org_and_desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :project %>
+    <%= form.text_field :project %>
+  </div>
+
+  <div class="field">
+    <%= form.label :project_and_desc %>
+    <%= form.text_field :project_and_desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prog %>
+    <%= form.text_field :prog %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prog_and_desc %>
+    <%= form.text_field :prog_and_desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :account_type %>
+    <%= form.text_field :account_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rev_or_exp %>
+    <%= form.text_field :rev_or_exp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acct_and_desc %>
+    <%= form.text_field :acct_and_desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acct %>
+    <%= form.number_field :acct %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
