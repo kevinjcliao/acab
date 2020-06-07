@@ -1,0 +1,43 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  department: MyString
+  division: MyString
+  dept: MyString
+  department_alias: MyString
+  service_area: MyString
+  service_area_alias: MyString
+  fund: MyString
+  fund_and_desc: MyString
+  org: MyString
+  org_and_desc: MyString
+  project: MyString
+  project_and_desc: MyString
+  prog: MyString
+  prog_and_desc: MyString
+  account_type: MyString
+  rev_or_exp: MyString
+  acct_and_desc: MyString
+  category: MyString
+  acct: 1
+
+two:
+  department: MyString
+  division: MyString
+  dept: MyString
+  department_alias: MyString
+  service_area: MyString
+  service_area_alias: MyString
+  fund: MyString
+  fund_and_desc: MyString
+  org: MyString
+  org_and_desc: MyString
+  project: MyString
+  project_and_desc: MyString
+  prog: MyString
+  prog_and_desc: MyString
+  account_type: MyString
+  rev_or_exp: MyString
+  acct_and_desc: MyString
+  category: MyString
+  acct: 1
