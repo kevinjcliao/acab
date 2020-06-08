@@ -558,9 +558,6 @@ end
 class ActionDispatch::Session::CacheStore
 end
 
-class ActionDispatch::Session::CookieStore::SessionId
-end
-
 class ActionDispatch::ShowExceptions
   FAILSAFE_RESPONSE = ::T.let(nil, ::T.untyped)
 end
@@ -1055,9 +1052,6 @@ class ActionView::Template::Inline
   Finalizer = ::T.let(nil, ::T.untyped)
 end
 
-class ActionView::Template::LegacyTemplate
-end
-
 class ActionView::Template::Sources::File
   def initialize(filename); end
 end
@@ -1369,51 +1363,6 @@ class ActiveRecord::ConnectionAdapters::AbstractAdapter
   SIMPLE_INT = ::T.let(nil, ::T.untyped)
 end
 
-class ActiveRecord::ConnectionAdapters::Column
-  def ==(other); end
-
-  def bigint?(); end
-
-  def collation(); end
-
-  def comment(); end
-
-  def default(); end
-
-  def default_function(); end
-
-  def encode_with(coder); end
-
-  def eql?(other); end
-
-  def has_default?(); end
-
-  def human_name(); end
-
-  def init_with(coder); end
-
-  def initialize(name, default, sql_type_metadata=T.unsafe(nil), null=T.unsafe(nil), default_function=T.unsafe(nil), collation: T.unsafe(nil), comment: T.unsafe(nil), **_); end
-
-  def limit(*args, &block); end
-
-  def name(); end
-
-  def null(); end
-
-  def precision(*args, &block); end
-
-  def scale(*args, &block); end
-
-  def sql_type(*args, &block); end
-
-  def sql_type_metadata(); end
-
-  def type(*args, &block); end
-end
-
-class ActiveRecord::ConnectionAdapters::Column
-end
-
 class ActiveRecord::ConnectionAdapters::SQLite3Adapter
   ADAPTER_NAME = ::T.let(nil, ::T.untyped)
   COLLATE_REGEX = ::T.let(nil, ::T.untyped)
@@ -1439,11 +1388,6 @@ module ActiveRecord::Enum
   SR_ENUM_KEYWORDS = ::T.let(nil, ::T.untyped)
 end
 
-module ActiveRecord::Enum
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
 class ActiveRecord::ExplainSubscriber
   EXPLAINED_SQLS = ::T.let(nil, ::T.untyped)
   IGNORED_PAYLOADS = ::T.let(nil, ::T.untyped)
@@ -1453,68 +1397,16 @@ module ActiveRecord::FinderMethods
   ONE_AS_ONE = ::T.let(nil, ::T.untyped)
 end
 
-class ActiveRecord::FixtureSet
-  MAX_ID = ::T.let(nil, ::T.untyped)
-end
-
 class ActiveRecord::InternalMetadata
-  include ::ActiveRecord::InternalMetadata::GeneratedAttributeMethods
-  include ::ActiveRecord::InternalMetadata::GeneratedAssociationMethods
   RelationType = ::T.let(nil, ::T.untyped)
 end
 
-class ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation
-  include ::ActiveRecord::Delegation::ClassSpecificRelation
-  include ::ActiveRecord::InternalMetadata::GeneratedRelationMethods
-end
-
-class ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation
-end
-
-class ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy
-  include ::ActiveRecord::Delegation::ClassSpecificRelation
-  include ::ActiveRecord::InternalMetadata::GeneratedRelationMethods
-end
-
-class ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy
-end
-
-class ActiveRecord::InternalMetadata::ActiveRecord_Relation
-  include ::ActiveRecord::Delegation::ClassSpecificRelation
-  include ::ActiveRecord::InternalMetadata::GeneratedRelationMethods
-end
-
-class ActiveRecord::InternalMetadata::ActiveRecord_Relation
-end
-
-module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
-end
-
-module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
-end
-
-module ActiveRecord::InternalMetadata::GeneratedAttributeMethods
-end
-
 module ActiveRecord::InternalMetadata::GeneratedAttributeMethods
   extend ::Mutex_m
 end
 
 module ActiveRecord::InternalMetadata::GeneratedRelationMethods
-end
-
-module ActiveRecord::InternalMetadata::GeneratedRelationMethods
   extend ::Mutex_m
-end
-
-class ActiveRecord::InternalMetadata
-  def self.[](key); end
-
-  def self.[]=(key, value); end
-
-  def self.create_table(); end
-
-  def self.drop_table(); end
 end
 
 module ActiveRecord::LegacyYamlAdapter
@@ -1536,9 +1428,6 @@ end
 
 module ActiveRecord::LegacyYamlAdapter
   def self.convert(klass, coder); end
-end
-
-class ActiveRecord::Locking::LockingType
 end
 
 class ActiveRecord::LogSubscriber
@@ -1739,84 +1628,6 @@ end
 class ActiveRecord::Migration::CommandRecorder
 end
 
-class ActiveRecord::Migration::Compatibility::V4_2
-  def index_exists?(table_name, column_name, options=T.unsafe(nil)); end
-
-  def remove_index(table_name, options=T.unsafe(nil)); end
-end
-
-module ActiveRecord::Migration::Compatibility::V4_2::TableDefinition
-  def belongs_to(*_, **options); end
-
-  def references(*_, **options); end
-
-  def timestamps(**options); end
-end
-
-module ActiveRecord::Migration::Compatibility::V4_2::TableDefinition
-end
-
-class ActiveRecord::Migration::Compatibility::V4_2
-end
-
-class ActiveRecord::Migration::Compatibility::V5_0
-  def add_belongs_to(table_name, ref_name, **options); end
-
-  def add_column(table_name, column_name, type, **options); end
-
-  def add_reference(table_name, ref_name, **options); end
-
-  def create_join_table(table_1, table_2, column_options: T.unsafe(nil), **options); end
-end
-
-module ActiveRecord::Migration::Compatibility::V5_0::TableDefinition
-  def belongs_to(*args, **options); end
-
-  def primary_key(name, type=T.unsafe(nil), **options); end
-
-  def references(*args, **options); end
-end
-
-module ActiveRecord::Migration::Compatibility::V5_0::TableDefinition
-end
-
-class ActiveRecord::Migration::Compatibility::V5_0
-end
-
-class ActiveRecord::Migration::Compatibility::V5_1
-  def change_column(table_name, column_name, type, options=T.unsafe(nil)); end
-end
-
-class ActiveRecord::Migration::Compatibility::V5_2
-  def add_timestamps(table_name, **options); end
-
-  def change_table(table_name, **options); end
-
-  def create_join_table(table_1, table_2, **options); end
-end
-
-module ActiveRecord::Migration::Compatibility::V5_2::CommandRecorder
-  def invert_change_column_comment(args); end
-
-  def invert_change_table_comment(args); end
-
-  def invert_transaction(args, &block); end
-end
-
-module ActiveRecord::Migration::Compatibility::V5_2::CommandRecorder
-end
-
-module ActiveRecord::Migration::Compatibility::V5_2::TableDefinition
-  def timestamps(**options); end
-end
-
-module ActiveRecord::Migration::Compatibility::V5_2::TableDefinition
-end
-
-module ActiveRecord::Migration::Compatibility
-  def self.find(version); end
-end
-
 class ActiveRecord::Migrator
   MIGRATOR_SALT = ::T.let(nil, ::T.untyped)
 end
@@ -1854,112 +1665,6 @@ module ActiveRecord::NullRelation
 end
 
 module ActiveRecord::NullRelation
-end
-
-class ActiveRecord::PredicateBuilder
-  def build(attribute, value); end
-
-  def build_bind_attribute(column_name, value); end
-
-  def build_from_hash(attributes); end
-
-  def expand_from_hash(attributes); end
-
-  def initialize(table); end
-
-  def register_handler(klass, handler); end
-
-  def resolve_column_aliases(*args, &block); end
-end
-
-class ActiveRecord::PredicateBuilder::ArrayHandler
-  def call(attribute, value); end
-
-  def initialize(predicate_builder); end
-end
-
-module ActiveRecord::PredicateBuilder::ArrayHandler::NullPredicate
-end
-
-module ActiveRecord::PredicateBuilder::ArrayHandler::NullPredicate
-  def self.or(other); end
-end
-
-class ActiveRecord::PredicateBuilder::ArrayHandler
-end
-
-class ActiveRecord::PredicateBuilder::AssociationQueryValue
-  def initialize(associated_table, value); end
-
-  def queries(); end
-end
-
-class ActiveRecord::PredicateBuilder::AssociationQueryValue
-end
-
-class ActiveRecord::PredicateBuilder::BaseHandler
-  def call(attribute, value); end
-
-  def initialize(predicate_builder); end
-end
-
-class ActiveRecord::PredicateBuilder::BaseHandler
-end
-
-class ActiveRecord::PredicateBuilder::BasicObjectHandler
-  def call(attribute, value); end
-
-  def initialize(predicate_builder); end
-end
-
-class ActiveRecord::PredicateBuilder::BasicObjectHandler
-end
-
-class ActiveRecord::PredicateBuilder::PolymorphicArrayValue
-  def initialize(associated_table, values); end
-
-  def queries(); end
-end
-
-class ActiveRecord::PredicateBuilder::PolymorphicArrayValue
-end
-
-class ActiveRecord::PredicateBuilder::RangeHandler
-  def call(attribute, value); end
-
-  def initialize(predicate_builder); end
-end
-
-class ActiveRecord::PredicateBuilder::RangeHandler::RangeWithBinds
-  def begin(); end
-
-  def begin=(_); end
-
-  def end(); end
-
-  def end=(_); end
-
-  def exclude_end?(); end
-end
-
-class ActiveRecord::PredicateBuilder::RangeHandler::RangeWithBinds
-  def self.[](*_); end
-
-  def self.members(); end
-end
-
-class ActiveRecord::PredicateBuilder::RangeHandler
-end
-
-class ActiveRecord::PredicateBuilder::RelationHandler
-  def call(attribute, value); end
-end
-
-class ActiveRecord::PredicateBuilder::RelationHandler
-end
-
-class ActiveRecord::PredicateBuilder
-  def self.references(attributes); end
 end
 
 module ActiveRecord::QueryMethods
@@ -2004,110 +1709,6 @@ end
 
 module ActiveRecord::SchemaMigration::GeneratedRelationMethods
   extend ::Mutex_m
-end
-
-class ActiveRecord::StatementCache
-  def execute(params, connection, &block); end
-
-  def initialize(query_builder, bind_map, klass); end
-end
-
-class ActiveRecord::StatementCache::BindMap
-  def bind(values); end
-
-  def initialize(bound_attributes); end
-end
-
-class ActiveRecord::StatementCache::BindMap
-end
-
-class ActiveRecord::StatementCache::Params
-  def bind(); end
-end
-
-class ActiveRecord::StatementCache::Params
-end
-
-class ActiveRecord::StatementCache::PartialQuery
-  def initialize(values); end
-end
-
-class ActiveRecord::StatementCache::PartialQuery
-end
-
-class ActiveRecord::StatementCache::PartialQueryCollector
-  def <<(str); end
-
-  def add_bind(obj); end
-
-  def value(); end
-end
-
-class ActiveRecord::StatementCache::PartialQueryCollector
-end
-
-class ActiveRecord::StatementCache::Query
-  def initialize(sql); end
-
-  def sql_for(binds, connection); end
-end
-
-class ActiveRecord::StatementCache::Query
-end
-
-class ActiveRecord::StatementCache::Substitute
-end
-
-class ActiveRecord::StatementCache::Substitute
-end
-
-class ActiveRecord::StatementCache
-  def self.create(connection, callable=T.unsafe(nil), &block); end
-
-  def self.partial_query(values); end
-
-  def self.partial_query_collector(); end
-
-  def self.query(sql); end
-
-  def self.unsupported_value?(value); end
-end
-
-class ActiveRecord::TableMetadata
-  def aggregated_with?(aggregation_name); end
-
-  def arel_attribute(column_name); end
-
-  def associated_predicate_builder(table_name); end
-
-  def associated_table(table_name); end
-
-  def associated_with?(association_name); end
-
-  def association_foreign_key(*args, &block); end
-
-  def association_foreign_type(*args, &block); end
-
-  def association_join_foreign_key(*args, &block); end
-
-  def association_join_primary_key(*args, &block); end
-
-  def has_column?(column_name); end
-
-  def initialize(klass, arel_table, association=T.unsafe(nil), types=T.unsafe(nil)); end
-
-  def polymorphic_association?(); end
-
-  def predicate_builder(); end
-
-  def reflect_on_aggregation(aggregation_name); end
-
-  def resolve_column_aliases(hash); end
-
-  def type(column_name); end
-end
-
-class ActiveRecord::TableMetadata
 end
 
 module ActiveRecord::Tasks::DatabaseTasks
@@ -2206,12 +1807,6 @@ ActiveRecord::Type::Decimal = ActiveModel::Type::Decimal
 ActiveRecord::Type::Float = ActiveModel::Type::Float
 
 ActiveRecord::Type::Integer = ActiveModel::Type::Integer
-
-class ActiveRecord::Type::Serialized
-end
-
-class ActiveRecord::Type::Time::Value
-end
 
 module ActiveRecord::VERSION
   MAJOR = ::T.let(nil, ::T.untyped)
@@ -2457,7 +2052,6 @@ class ActiveSupport::Subscriber
 end
 
 class ActiveSupport::TestCase
-  include ::Minitest::Parallel::Test
   include ::ActiveSupport::Testing::SetupAndTeardown
 end
 
@@ -2499,6 +2093,11 @@ end
 
 module ActiveSupport::XmlMini_REXML
   CONTENT_KEY = ::T.let(nil, ::T.untyped)
+end
+
+class AddFundingNumberToLineItems
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 module Addressable::IDNA
@@ -3557,6 +3156,244 @@ end
 module CGI::HtmlExtension
 end
 
+class CSV
+  def close(*args, &block); end
+
+  def close_read(*args, &block); end
+
+  def close_write(*args, &block); end
+
+  def closed?(*args, &block); end
+
+  def external_encoding(*args, &block); end
+
+  def fcntl(*args, &block); end
+
+  def fileno(*args, &block); end
+
+  def flush(*args, &block); end
+
+  def fsync(*args, &block); end
+
+  def internal_encoding(*args, &block); end
+
+  def isatty(*args, &block); end
+
+  def pid(*args, &block); end
+
+  def pos(*args, &block); end
+
+  def pos=(*args, &block); end
+
+  def reopen(*args, &block); end
+
+  def seek(*args, &block); end
+
+  def string(*args, &block); end
+
+  def sync(*args, &block); end
+
+  def sync=(*args, &block); end
+
+  def tell(*args, &block); end
+
+  def truncate(*args, &block); end
+
+  def tty?(*args, &block); end
+  ConverterEncoding = ::T.let(nil, ::T.untyped)
+  Converters = ::T.let(nil, ::T.untyped)
+  DateMatcher = ::T.let(nil, ::T.untyped)
+  DateTimeMatcher = ::T.let(nil, ::T.untyped)
+  HeaderConverters = ::T.let(nil, ::T.untyped)
+end
+
+class CSV::FieldInfo
+  def header(); end
+
+  def header=(_); end
+
+  def index(); end
+
+  def index=(_); end
+
+  def line(); end
+
+  def line=(_); end
+end
+
+class CSV::FieldInfo
+  def self.[](*_); end
+
+  def self.members(); end
+end
+
+class CSV::FieldsConverter
+  include ::Enumerable
+  def add_converter(name=T.unsafe(nil), &converter); end
+
+  def convert(fields, headers, lineno); end
+
+  def each(&block); end
+
+  def empty?(); end
+
+  def initialize(options=T.unsafe(nil)); end
+end
+
+class CSV::FieldsConverter
+end
+
+class CSV::MalformedCSVError
+  def initialize(message, line_number); end
+
+  def line_number(); end
+
+  def lineno(); end
+end
+
+class CSV::Parser
+  def column_separator(); end
+
+  def field_size_limit(); end
+
+  def header_row?(); end
+
+  def headers(); end
+
+  def initialize(input, options); end
+
+  def liberal_parsing?(); end
+
+  def line(); end
+
+  def lineno(); end
+
+  def parse(&block); end
+
+  def quote_character(); end
+
+  def return_headers?(); end
+
+  def row_separator(); end
+
+  def skip_blanks?(); end
+
+  def skip_lines(); end
+
+  def unconverted_fields?(); end
+
+  def use_headers?(); end
+  SCANNER_TEST = ::T.let(nil, ::T.untyped)
+end
+
+class CSV::Parser::InputsScanner
+  def each_line(row_separator); end
+
+  def eos?(); end
+
+  def initialize(inputs, encoding, chunk_size: T.unsafe(nil)); end
+
+  def keep_back(); end
+
+  def keep_drop(); end
+
+  def keep_end(); end
+
+  def keep_start(); end
+
+  def rest(); end
+
+  def scan(pattern); end
+
+  def scan_all(pattern); end
+end
+
+class CSV::Parser::InputsScanner
+end
+
+class CSV::Parser::InvalidEncoding
+end
+
+class CSV::Parser::InvalidEncoding
+end
+
+class CSV::Parser::Scanner
+  def each_line(row_separator); end
+
+  def initialize(*args); end
+
+  def keep_back(); end
+
+  def keep_drop(); end
+
+  def keep_end(); end
+
+  def keep_start(); end
+
+  def scan_all(_); end
+end
+
+class CSV::Parser::Scanner
+end
+
+class CSV::Parser
+end
+
+class CSV::Row
+  def dig(index_or_header, *indexes); end
+
+  def each_pair(&block); end
+
+  def empty?(*args, &block); end
+
+  def initialize(headers, fields, header_row=T.unsafe(nil)); end
+
+  def length(*args, &block); end
+
+  def size(*args, &block); end
+
+  def to_ary(*_); end
+end
+
+class CSV::Row
+  extend ::Forwardable
+end
+
+class CSV::Table
+  def dig(index_or_header, *index_or_headers); end
+
+  def empty?(*args, &block); end
+
+  def initialize(array_of_rows, headers: T.unsafe(nil)); end
+
+  def length(*args, &block); end
+
+  def size(*args, &block); end
+end
+
+class CSV::Table
+  extend ::Forwardable
+end
+
+class CSV::Writer
+  def <<(row); end
+
+  def headers(); end
+
+  def initialize(output, options); end
+
+  def lineno(); end
+
+  def rewind(); end
+end
+
+class CSV::Writer
+end
+
+class CSV
+  extend ::Forwardable
+end
+
 module Capybara
   VERSION = ::T.let(nil, ::T.untyped)
 end
@@ -4127,6 +3964,11 @@ class Crass::Tokenizer
   RE_UNICODE_RANGE_START = ::T.let(nil, ::T.untyped)
   RE_WHITESPACE = ::T.let(nil, ::T.untyped)
   RE_WHITESPACE_ANCHORED = ::T.let(nil, ::T.untyped)
+end
+
+class CreateLineItems
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 class DRb::DRbArray
@@ -5672,6 +5514,22 @@ module Gem
 end
 
 module GeneratedUrlHelpers
+  def edit_line_item_path(*args); end
+
+  def edit_line_item_url(*args); end
+
+  def line_item_path(*args); end
+
+  def line_item_url(*args); end
+
+  def line_items_path(*args); end
+
+  def line_items_url(*args); end
+
+  def new_line_item_path(*args); end
+
+  def new_line_item_url(*args); end
+
   def rails_info_path(*args); end
 
   def rails_info_properties_path(*args); end
@@ -5687,6 +5545,14 @@ module GeneratedUrlHelpers
   def rails_mailers_path(*args); end
 
   def rails_mailers_url(*args); end
+
+  def root_path(*args); end
+
+  def root_url(*args); end
+
+  def welcome_index_path(*args); end
+
+  def welcome_index_url(*args); end
 end
 
 module GlobalID::Locator
@@ -6541,13 +6407,6 @@ module ITypeAssert
   Elem = type_member(:out)
 end
 
-module ITypeAssert
-  extend ::T::Private::Abstract::Hooks
-  extend ::T::InterfaceWrapper::Helpers
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
 class Integer
   include ::JSON::Ext::Generator::GeneratorMethods::Integer
   include ::ActiveSupport::NumericWithFormat
@@ -6599,6 +6458,66 @@ end
 
 class KeyError
   include ::DidYouMean::Correctable
+end
+
+class LineItem
+  include ::LineItem::GeneratedAttributeMethods
+  include ::LineItem::GeneratedAssociationMethods
+  RelationType = ::T.let(nil, ::T.untyped)
+end
+
+class LineItem::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::LineItem::GeneratedRelationMethods
+end
+
+class LineItem::ActiveRecord_AssociationRelation
+end
+
+class LineItem::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::LineItem::GeneratedRelationMethods
+end
+
+class LineItem::ActiveRecord_Associations_CollectionProxy
+end
+
+class LineItem::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::LineItem::GeneratedRelationMethods
+end
+
+class LineItem::ActiveRecord_Relation
+end
+
+module LineItem::GeneratedAssociationMethods
+end
+
+module LineItem::GeneratedAssociationMethods
+end
+
+module LineItem::GeneratedAttributeMethods
+end
+
+module LineItem::GeneratedAttributeMethods
+  extend ::Mutex_m
+end
+
+module LineItem::GeneratedRelationMethods
+end
+
+module LineItem::GeneratedRelationMethods
+  extend ::Mutex_m
+end
+
+class LineItem
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class LineItemsController
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 module Listen
@@ -7106,9 +7025,6 @@ class Mail::POP3
 end
 
 class Mail::POP3
-end
-
-class Mail::PartsList
 end
 
 class Mail::PhraseList
@@ -8333,6 +8249,7 @@ class Object
   ARGV = ::T.let(nil, ::T.untyped)
   CROSS_COMPILING = ::T.let(nil, ::T.untyped)
   ENV = ::T.let(nil, ::T.untyped)
+  FY_KEYS = ::T.let(nil, ::T.untyped)
   RUBY_COPYRIGHT = ::T.let(nil, ::T.untyped)
   RUBY_DESCRIPTION = ::T.let(nil, ::T.untyped)
   RUBY_ENGINE = ::T.let(nil, ::T.untyped)
@@ -8460,76 +8377,12 @@ module Parlour
   VERSION = ::T.let(nil, ::T.untyped)
 end
 
-class Parlour::ConflictResolver
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
 module Parlour::Debugging::Tree
   INDENT_SPACES = ::T.let(nil, ::T.untyped)
 end
 
-module Parlour::Debugging::Tree
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-module Parlour::Debugging
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class Parlour::ParseError
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class Parlour::Plugin
-  extend ::T::Private::Abstract::Hooks
-  extend ::T::InterfaceWrapper::Helpers
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class Parlour::RbiGenerator::Options
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
 class Parlour::RbiGenerator::Parameter
   PREFIXES = ::T.let(nil, ::T.untyped)
-end
-
-class Parlour::RbiGenerator::Parameter
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class Parlour::RbiGenerator::RbiObject
-  extend ::T::Private::Abstract::Hooks
-  extend ::T::InterfaceWrapper::Helpers
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class Parlour::RbiGenerator
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-module Parlour::TypeLoader
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class Parlour::TypeParser::NodePath
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class Parlour::TypeParser
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 ParseError = Racc::ParseError
@@ -9284,9 +9137,6 @@ end
 
 class Rack::Session::Abstract::SessionHash
   Unspecified = ::T.let(nil, ::T.untyped)
-end
-
-class Rack::Session::Cookie::SessionId
 end
 
 class Rack::Session::Pool
@@ -11612,44 +11462,7 @@ module Socket::Constants
   TCP_NOPUSH = ::T.let(nil, ::T.untyped)
 end
 
-class SorbetRails::Config
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class SorbetRails::ModelPlugins::ActiveRecordAttribute::ColumnType
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
 SorbetRails::ModelPlugins::Base::Parameter = Parlour::RbiGenerator::Parameter
-
-module SorbetRails::ModelPlugins
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class SorbetRails::ModelRbiFormatter
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-module SorbetRails::ModelUtils
-  extend ::T::Private::Abstract::Hooks
-  extend ::T::InterfaceWrapper::Helpers
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-module SorbetRails::PluckToTStruct
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-module SorbetRails::Utils
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
 
 module SorbetRails
   extend ::T::Private::Methods::SingletonMethodHooks
@@ -11929,11 +11742,6 @@ end
 
 class TA
   Elem = type_member
-end
-
-class TA
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 module TZInfo::RubyCoreSupport
@@ -13181,6 +12989,11 @@ class Webpacker::Env
   DEFAULT = ::T.let(nil, ::T.untyped)
 end
 
+class WelcomeController
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
 module XPath::DSL
   AXES = ::T.let(nil, ::T.untyped)
   LOWERCASE_LETTERS = ::T.let(nil, ::T.untyped)
@@ -13331,9 +13144,6 @@ end
 
 module Zip::NullInputStream
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-end
-
-class Zip::StreamableStream
 end
 
 Zip::ZipCompressionMethodError = Zip::CompressionMethodError
