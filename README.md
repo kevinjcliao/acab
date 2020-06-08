@@ -1,4 +1,4 @@
-# README
+# ACAB: Allowing Citizens to Access the Budget
 
 ## About
 This is a project to input the 2019-2021 Oakland City Budget into a Rails
