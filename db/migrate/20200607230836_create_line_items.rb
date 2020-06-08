@@ -1,4 +1,9 @@
+# typed: strict
+
 class CreateLineItems < ActiveRecord::Migration[6.0]
+  extend T::Sig
+
+  sig {void}
   def change
     create_table :line_items do |t|
       t.string :department

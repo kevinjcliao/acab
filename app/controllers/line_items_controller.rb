@@ -1,28 +1,35 @@
+# frozen_string_literal: true
+
+# typed: false
 class LineItemsController < ApplicationController
-  before_action :set_line_item, only: [:show, :edit, :update, :destroy]
+  extend T::Sig
+  before_action :set_line_item, only: %i[show edit update destroy]
 
   # GET /line_items
   # GET /line_items.json
+  sig { void }
   def index
     @line_items = LineItem.all
   end
 
   # GET /line_items/1
   # GET /line_items/1.json
-  def show
-  end
+  sig { void }
+  def show; end
 
   # GET /line_items/new
+  sig { void }
   def new
     @line_item = LineItem.new
   end
 
   # GET /line_items/1/edit
-  def edit
-  end
+  sig { void }
+  def edit; end
 
   # POST /line_items
   # POST /line_items.json
+  sig { void }
   def create
     @line_item = LineItem.new(line_item_params)
 
@@ -39,6 +46,7 @@ class LineItemsController < ApplicationController
 
   # PATCH/PUT /line_items/1
   # PATCH/PUT /line_items/1.json
+  sig { void }
   def update
     respond_to do |format|
       if @line_item.update(line_item_params)
@@ -53,6 +61,7 @@ class LineItemsController < ApplicationController
 
   # DELETE /line_items/1
   # DELETE /line_items/1.json
+  sig { void }
   def destroy
     @line_item.destroy
     respond_to do |format|
@@ -62,13 +71,35 @@ class LineItemsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_line_item
-      @line_item = LineItem.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def line_item_params
-      params.require(:line_item).permit(:department, :division, :dept, :department_alias, :service_area, :service_area_alias, :fund, :fund_and_desc, :org, :org_and_desc, :project, :project_and_desc, :prog, :prog_and_desc, :account_type, :rev_or_exp, :acct_and_desc, :category, :acct)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  sig { void }
+  def set_line_item
+    @line_item = LineItem.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  sig { void }
+  def line_item_params
+    params.require(:line_item).permit(
+      :department,
+      :division,
+      :dept,
+      :department_alias,
+      :service_area,
+      :service_area_alias,
+      :fund, :fund_and_desc,
+      :org,
+      :org_and_desc,
+      :project,
+      :project_and_desc,
+      :prog,
+      :prog_and_desc,
+      :account_type,
+      :rev_or_exp,
+      :acct_and_desc,
+      :category,
+      :acct
+    )
+  end
 end
