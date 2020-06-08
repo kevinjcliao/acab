@@ -24,6 +24,9 @@
       <th>Acct and desc</th>
       <th>Category</th>
       <th>Acct</th>
+      <th>FY18-19 Midcycle Adopted Total</th>
+      <th>FY19-20 Total</th>
+      <th>FY20-21 Total</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -50,6 +53,9 @@
         <td><%= line_item.acct_and_desc %></td>
         <td><%= line_item.category %></td>
         <td><%= line_item.acct %></td>
+        <td><%= line_item.fy18_19_midcycle_adopted_total %></td>
+        <td><%= line_item.fy19_20_biennial_working_total %></td>
+        <td><%= line_item.fy20_21_biennial_working_total%>
         <td><%= link_to 'Show', line_item %></td>
         <td><%= link_to 'Edit', edit_line_item_path(line_item) %></td>
         <td><%= link_to 'Destroy', line_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_07_230836) do
+ActiveRecord::Schema.define(version: 2020_06_07_233740) do
 
   create_table "line_items", force: :cascade do |t|
     t.string "department"
@@ -34,6 +34,9 @@ ActiveRecord::Schema.define(version: 2020_06_07_230836) do
     t.integer "acct"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "fy18_19_midcycle_adopted_total"
+    t.integer "fy19_20_biennial_working_total"
+    t.integer "fy20_21_biennial_working_total"
   end
 
 end
